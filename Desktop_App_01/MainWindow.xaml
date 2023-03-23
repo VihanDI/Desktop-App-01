@@ -4,9 +4,83 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop_App_01"
+        xmlns:viewModelDir="clr-namespace:Desktop_App_01.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Student Info" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanMinimize"
+        AllowsTransparency="False"
+        Background="Transparent">
+    <Window.DataContext>
+        <viewModelDir:MainWindowVM/>
+    </Window.DataContext>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Border CornerRadius="0 0 0 0" Grid.Column="0">
+            <Border.Background>
+                <SolidColorBrush Color="#ffffff">
+                    
+                </SolidColorBrush>
+            </Border.Background>
 
+            <Grid>
+
+                <!-- 
+                <Canvas>
+                    <Polygon Points="0 20 0 400 80 70" Stroke="#0967b4" Fill="White"/>
+                    <Polygon Points="250 380 320 40 320 440" Stroke="#0967b4" Fill="White"/>
+                </Canvas>
+                -->
+
+                <Canvas>
+                    
+                </Canvas>
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Style="{StaticResource titleText}" Text="Student Database"/>
+                    <Button Style="{StaticResource mainButton}" Content="Add Student" Click="Button_Add_Student"/>
+                    <Button Style="{StaticResource mainButton}" Content="Edit Details"/>
+                    <Button Style="{StaticResource mainButton}" Content="Delete Student"/>
+                    <Button Style="{StaticResource mainButton}" Content="Refresh Database" Command="{Binding LoadStudentsCommand}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border CornerRadius="0 0 0 0" Background="#f6f6f6" Grid.Column="1">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Style="{StaticResource titleText}" Foreground="#1d1d1b" Text="Student Information" Margin="50 50 50 20"/>
+
+                <Border Margin="20" CornerRadius="5" Width="420" Height="280" Padding="10">
+                    <Border.Background>
+                        <SolidColorBrush Color="#ffffff">
+
+                        </SolidColorBrush>
+                    </Border.Background>
+
+                    <ScrollViewer>
+                        <ListView ItemsSource="{Binding Students}" BorderBrush="Transparent">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Padding="5" Margin="5" BorderBrush="Black" CornerRadius="5">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{Binding ImageURL}" Width="40" Height="40"/>
+                                            <TextBlock Text="{Binding FirstName}" Margin="4" Padding="5" FontSize="16"/>
+                                            <TextBlock Text="{Binding LastName}" Margin="4" Padding="5" FontSize="16"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+                </Border>
+                
+                
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

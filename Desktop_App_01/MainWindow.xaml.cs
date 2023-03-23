@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Desktop_App_01.ViewModels;
+using Desktop_App_01.Views;
 
 namespace Desktop_App_01
 {
@@ -23,6 +25,13 @@ namespace Desktop_App_01
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowVM();
+        }
+        private void Button_Add_Student(object sender, RoutedEventArgs e)
+        {
+            var window = new AddStudentWindow();
+            window.Show();
+            Close();
         }
     }
 }
