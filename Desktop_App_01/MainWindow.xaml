@@ -38,14 +38,14 @@
                 -->
 
                 <Canvas>
-                    
+                    <!-- Image or Logo -->
                 </Canvas>
 
                 <StackPanel Orientation="Vertical">
                     <TextBlock Style="{StaticResource titleText}" Text="Student Database"/>
                     <Button Style="{StaticResource mainButton}" Content="Add Student" Click="Button_Add_Student"/>
-                    <Button Style="{StaticResource mainButton}" Content="Edit Details"/>
-                    <Button Style="{StaticResource mainButton}" Content="Delete Student"/>
+                    <Button Style="{StaticResource mainButton}" Content="Edit Details" Click="Button_Edit_Student"/>
+                    <Button Style="{StaticResource mainButton}" Content="Delete Student" Click="Button_Delete"/>
                     <Button Style="{StaticResource mainButton}" Content="Refresh Database" Command="{Binding LoadStudentsCommand}"/>
                 </StackPanel>
             </Grid>
@@ -54,6 +54,7 @@
         <Border CornerRadius="0 0 0 0" Background="#f6f6f6" Grid.Column="1">
             <StackPanel Orientation="Vertical">
                 <TextBlock Style="{StaticResource titleText}" Foreground="#1d1d1b" Text="Student Information" Margin="50 50 50 20"/>
+                <TextBlock Style="{StaticResource normalText}" Text="Select Students to Edit or Delete" TextAlignment="Center" Margin="0 0 0 0"/>
 
                 <Border Margin="20" CornerRadius="5" Width="420" Height="280" Padding="10">
                     <Border.Background>
@@ -63,7 +64,7 @@
                     </Border.Background>
 
                     <ScrollViewer>
-                        <ListView ItemsSource="{Binding Students}" BorderBrush="Transparent">
+                        <ListView ItemsSource="{Binding Students}" BorderBrush="Transparent" FontFamily="IBM Plex Sans Regular" FontWeight="Thin" Name="List1">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <Border Padding="5" Margin="5" BorderBrush="Black" CornerRadius="5">
