@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Desktop_App_01.Models;
 using Desktop_App_01.ViewModels;
+using Desktop_App_01.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -30,16 +31,27 @@ namespace Desktop_App_01.ViewModels
         {
             Student s = new Student()
             {
-                FirstName = FirstName,
-                LastName = LastName,
-                Image = Image,
+                FirstName = firstName,
+                LastName = lastName,
+                Image = image,
                 Age = age
             };
 
-            using (var db = new DataBaseContext())
+            if(firstName == "" || lastName == "" || age == 0 || image == "")
             {
-                db.ListofStudents.Add(s);
-                db.SaveChanges();
+                var window = new EmptyErrorMessageBox();
+                window.ShowDialog();
+            }
+            else
+            {
+                using (var db = new DataBaseContext())
+                {
+                    db.ListofStudents.Add(s);
+                    db.SaveChanges();
+                }
+
+                var window = new SavedMessageBoxWindow();
+                window.ShowDialog();
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Desktop_App_01.Models;
+using Desktop_App_01.Views;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace Desktop_App_01.ViewModels
             FirstName = null;
             LastName = null;
             Age = 0;
-            Image = null;
+            image = null;
         }
 
         public EditStudentWindowVM(int id, string fname, string lname, int a, string img)
@@ -42,27 +43,38 @@ namespace Desktop_App_01.ViewModels
             FirstName = fname;
             LastName = lname;
             Age = a;
-            Image = img;
+            image = img;
 
         }
 
         [RelayCommand]
         public void editStudent()
         {
-            using (var db = new DataBaseContext())
+            if (firstName == "" || lastName == "" || age == 0 || image == "")
             {
-                var students = db.ListofStudents;
-                foreach (var s in students)
+                var window = new EmptyErrorMessageBox();
+                window.ShowDialog();
+            }
+            else
+            {
+                using (var db = new DataBaseContext())
                 {
-                    if(index == s.ID)
+                    var students = db.ListofStudents;
+                    foreach (var s in students)
                     {
-                        s.FirstName = firstName;
-                        s.LastName = lastName;
-                        s.Age = age;
-                        s.Image = image;
+                        if (index == s.ID)
+                        {
+                            s.FirstName = firstName;
+                            s.LastName = lastName;
+                            s.Age = age;
+                            s.Image = image;
+                        }
                     }
+                    db.SaveChanges();
                 }
-                db.SaveChanges();
+
+                var window = new SavedMessageBoxWindow();
+                window.ShowDialog();
             }
         }
     }

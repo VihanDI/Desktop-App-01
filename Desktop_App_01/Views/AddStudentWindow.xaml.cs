@@ -28,9 +28,9 @@ namespace Desktop_App_01.Views
 
         private void Button_Enter(object sender, RoutedEventArgs e)
         {
-            var mainWindow = new MainWindow();
-            mainWindow.Show();
-            Close();
+            //var mainWindow = new MainWindow();
+            //mainWindow.Show();
+            //Close();
         }
 
         private void Button_Cancel(object sender, RoutedEventArgs e)

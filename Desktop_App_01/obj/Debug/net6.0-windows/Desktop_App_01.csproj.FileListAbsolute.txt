@@ -74,3 +74,11 @@ D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_
 D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\EditStudentWindow.g.cs
 D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\EditStudentWindow.baml
+D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\MessageBoxWindow.g.cs
+D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\MessageBoxWindow.baml
+D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\EmptyErrorMessageBox.g.cs
+D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\NotSelectedErrorMessageBox.g.cs
+D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\EmptyErrorMessageBox.baml
+D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\NotSelectedErrorMessageBox.baml
+D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\SavedMessageBoxWindow.g.cs
+D:\Data\Documents\Academics\My Works\GitHub Projects\Desktop-App-01\Desktop_App_01\obj\Debug\net6.0-windows\Views\SavedMessageBoxWindow.baml
