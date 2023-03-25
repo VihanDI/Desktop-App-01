@@ -42,12 +42,12 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource dataEntryText}" Text="Last Name"/>
-                    <TextBox Text="{Binding LastName}" Style="{StaticResource textBox}"/>
+                    <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBox}"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource dataEntryText}" Text="Age"/>
-                    <TextBox Text="{Binding Age}" Style="{StaticResource textBox}" MaxLength="3"/>
+                    <TextBox Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBox}" MaxLength="3"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
@@ -57,7 +57,7 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource dataEntryText}" Text="Image"/>
-                    <TextBox Text="{Binding Image}" Style="{StaticResource textBox}" MaxLength="200" Width="150"/>
+                    <TextBox Text="{Binding Image, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBox}" MaxLength="200" Width="150"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 30 20 0">

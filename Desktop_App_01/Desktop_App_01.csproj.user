@@ -13,6 +13,18 @@
     <Compile Update="Views\EditStudentWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EmptyErrorMessageBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MessageBoxWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\NotSelectedErrorMessageBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SavedMessageBoxWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -22,6 +34,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\EditStudentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EmptyErrorMessageBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MessageBoxWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\NotSelectedErrorMessageBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SavedMessageBoxWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

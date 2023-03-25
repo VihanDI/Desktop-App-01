@@ -41,9 +41,9 @@ namespace Desktop_App_01.Views
 
         private void Button_Edit(object sender, RoutedEventArgs e)
         {
-            var mainWindow = new MainWindow();
-            mainWindow.Show();
-            Close();
+            //var mainWindow = new MainWindow();
+            //mainWindow.Show();
+            //Close();
         }
     }
 }

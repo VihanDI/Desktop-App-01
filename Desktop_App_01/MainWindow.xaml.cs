@@ -30,6 +30,7 @@ namespace Desktop_App_01
             InitializeComponent();
             DataContext = new MainWindowVM();
         }
+
         private void Button_Add_Student(object sender, RoutedEventArgs e)
         {
             var window = new AddStudentWindow();
@@ -50,9 +51,17 @@ namespace Desktop_App_01
         {
             Student selectedStudent = (List1.SelectedItem as Student);
 
-            var window = new EditStudentWindow(selectedStudent.ID, selectedStudent.FirstName, selectedStudent.LastName, selectedStudent.Age, selectedStudent.Image);
-            window.Show();
-            Close();
+            if (selectedStudent == null)
+            {
+                var window = new NotSelectedErrorMessageBox();
+                window.ShowDialog();
+            }
+            else
+            {
+                var window = new EditStudentWindow(selectedStudent.ID, selectedStudent.FirstName, selectedStudent.LastName, selectedStudent.Age, selectedStudent.Image);
+                window.Show();
+                Close();
+            }
             /*
             var window = new EditStudentWindow();
             window.Show();
@@ -63,8 +72,22 @@ namespace Desktop_App_01
         {
             Student selectedStudent = (List1.SelectedItem as Student);
 
-            //DialogResult result = MessageBox.Show("Are you sure you want to delete this student?", "Confirmation", MessageBoxButton.YesNo);
+            if(selectedStudent == null)
+            {
+                var window = new NotSelectedErrorMessageBox();
+                window.ShowDialog();
+            }
+            else
+            {
+                var window = new MessageBoxWindow(selectedStudent);
+                window.ShowDialog();
+            }
             
+            //Close();
+
+            //DialogResult result = MessageBox.Show("Are you sure you want to delete this student?", "Confirmation", MessageBoxButton.YesNo);
+
+            /*
             if(MessageBox.Show("Are you sure you want to delete this student?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 using (var db = new DataBaseContext())
@@ -80,6 +103,7 @@ namespace Desktop_App_01
                     }
                 }
             }
+            */
 
             /*
             var window = new EditStudentWindow();
