@@ -83,16 +83,17 @@
         </Style>
 
         <Style x:Key="circleButton" TargetType="Button">
-            <Setter Property="Margin" Value="8 0"/>
-            <Setter Property="Width" Value="50"/>
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="Foreground" Value="Indigo"/>
-            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Margin" Value="20 0"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="#1d1d1b"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border BorderThickness="2" BorderBrush="BlueViolet" CornerRadius="30" Padding="15" Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Border BorderThickness="0" Padding="5" CornerRadius="20" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center">
 
                             </ContentPresenter>
                         </Border>
@@ -102,12 +103,12 @@
 
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="MediumOrchid"/>
-                    <Setter Property="Foreground" Value="Indigo"/>
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="#1d1d1b"/>
                 </Trigger>
                 <Trigger Property="IsMouseCaptured" Value="True">
-                    <Setter Property="Background" Value="LightGray"/>
-                    <Setter Property="Foreground" Value="Indigo"/>
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="#1d1d1b"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
