@@ -28,7 +28,7 @@ namespace Desktop_App_01.ViewModels
         public string image;
 
         [ObservableProperty]
-        public DateOnly dateOfBirth;
+        public DateTime dateOfBirth;
 
         [ObservableProperty]
         public double gPA;
@@ -43,7 +43,7 @@ namespace Desktop_App_01.ViewModels
             GPA = 0;
         }
 
-        public EditStudentWindowVM(int id, string fname, string lname, int a, string img, double gpa, DateOnly dob)
+        public EditStudentWindowVM(int id, string fname, string lname, int a, string img, double gpa, DateTime dob)
         {
             index = id;
             FirstName = fname;

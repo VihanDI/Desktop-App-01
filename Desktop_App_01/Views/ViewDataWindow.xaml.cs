@@ -20,7 +20,7 @@ namespace Desktop_App_01.Views
     /// </summary>
     public partial class ViewDataWindow : Window
     {
-        public ViewDataWindow(int id, string fname, string lname, int age, string img, double gpa, DateOnly dob)
+        public ViewDataWindow(int id, string fname, string lname, int age, string img, double gpa, DateTime dob)
         {
             InitializeComponent();
             DataContext = new ViewDataWindowVM(id, fname, lname, age, img, gpa, dob);

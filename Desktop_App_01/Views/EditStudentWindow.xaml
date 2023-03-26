@@ -59,7 +59,7 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource dataEntryText}" Text="Date of Birth"/>
-                    <DatePicker Text="{Binding DateOfBirth}" CalendarStyle="{StaticResource DOBCalendar}" Height="25" Margin="15" Width="150" FontSize="16" FontFamily="IBM Plex Sans Regular" FontWeight="Thin" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+                    <DatePicker SelectedDate="{Binding DateOfBirth}" CalendarStyle="{StaticResource DOBCalendar}" Height="25" Margin="15" Width="150" FontSize="16" FontFamily="IBM Plex Sans Regular" FontWeight="Thin" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
