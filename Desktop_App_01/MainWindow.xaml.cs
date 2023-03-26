@@ -58,7 +58,7 @@ namespace Desktop_App_01
             }
             else
             {
-                var window = new EditStudentWindow(selectedStudent.ID, selectedStudent.FirstName, selectedStudent.LastName, selectedStudent.Age, selectedStudent.Image);
+                var window = new EditStudentWindow(selectedStudent.ID, selectedStudent.FirstName, selectedStudent.LastName, selectedStudent.Age, selectedStudent.Image, selectedStudent.GPA, selectedStudent.DateOfBirth);
                 window.Show();
                 Close();
             }
@@ -110,16 +110,13 @@ namespace Desktop_App_01
             window.Show();
             */
         }
-
-        /*
         private void ListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Student selectedStudent = (List1.SelectedItem as Student);
             
-            var window = new EditStudentWindow(selectedStudent.ID, selectedStudent.FirstName, selectedStudent.LastName, selectedStudent.Age, selectedStudent.Image);
+            var window = new ViewDataWindow(selectedStudent.ID, selectedStudent.FirstName, selectedStudent.LastName, selectedStudent.Age, selectedStudent.Image, selectedStudent.GPA, selectedStudent.DateOfBirth);
             window.Show();
             Close();
         }
-        */
     }
 }

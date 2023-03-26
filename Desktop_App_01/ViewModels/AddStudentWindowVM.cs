@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using Desktop_App_01.Models;
 using Desktop_App_01.ViewModels;
 using Desktop_App_01.Views;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -26,6 +27,21 @@ namespace Desktop_App_01.ViewModels
         [ObservableProperty]
         public string image;
 
+        [ObservableProperty]
+        public DateOnly dateOfBirth;
+
+        [ObservableProperty]
+        public double gPA;
+
+        public AddStudentWindowVM()
+        {
+            FirstName = null;
+            LastName = null;
+            Age = 0;
+            image = null;
+            gPA = 0;
+        }
+
         [RelayCommand]
         public void InsertStudent()
         {
@@ -34,10 +50,12 @@ namespace Desktop_App_01.ViewModels
                 FirstName = firstName,
                 LastName = lastName,
                 Image = image,
-                Age = age
+                Age = age,
+                GPA = gPA,
+                DateOfBirth = dateOfBirth
             };
 
-            if(firstName == "" || lastName == "" || age == 0 || image == "")
+            if(firstName == "" || lastName == "" || (age <= 0 || age > 120) || image == "" || (gPA == 0 || gPA > 4.0))
             {
                 var window = new EmptyErrorMessageBox();
                 window.ShowDialog();

@@ -25,6 +25,9 @@
     <Compile Update="Views\SavedMessageBoxWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ViewDataWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SavedMessageBoxWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ViewDataWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
