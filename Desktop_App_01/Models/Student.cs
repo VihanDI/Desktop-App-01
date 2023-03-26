@@ -12,8 +12,8 @@ namespace Desktop_App_01.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        //public double GPA { get; set; }
-        //public DateOnly DateOfBirth { get; set; }
+        public DateOnly DateOfBirth { get; set; }
+        public double GPA { get; set; }
         public string Image { get; set; }
         public string ImageURL
         {

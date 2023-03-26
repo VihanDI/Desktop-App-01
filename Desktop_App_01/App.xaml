@@ -8,7 +8,7 @@
             <Setter Property="FontSize" Value="28"/>
             <Setter Property="FontWeight" Value="Light"/>
             <Setter Property="TextAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="0 50"/>
+            <Setter Property="Margin" Value="0 53"/>
             <Setter Property="Foreground" Value="#1d1d1b"/>
             <Setter Property="FontFamily" Value="IBM Plex Sans Regular"/>
         </Style>

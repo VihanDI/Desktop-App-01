@@ -7,7 +7,7 @@
         xmlns:viewModelDir="clr-namespace:Desktop_App_01.ViewModels"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="EditStudentWindow" Height="500" Width="800"
+        Title="EditStudentWindow" Height="520" Width="800"
         Icon="/Icons/Icon.png"
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow"
@@ -44,30 +44,35 @@
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource dataEntryText}" Text="First Name"/>
-                    <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBox}"/>
+                    <TextBox Text="{Binding FirstName}" Style="{StaticResource textBox}"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource dataEntryText}" Text="Last Name"/>
-                    <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBox}"/>
+                    <TextBox Text="{Binding LastName}" Style="{StaticResource textBox}"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource dataEntryText}" Text="Age"/>
-                    <TextBox Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBox}" MaxLength="3"/>
+                    <TextBox Text="{Binding Age}" Style="{StaticResource textBox}" MaxLength="3"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource dataEntryText}" Text="Date of Birth"/>
-                    <DatePicker CalendarStyle="{StaticResource DOBCalendar}" Height="25" Margin="15" Width="150" FontSize="16" FontFamily="IBM Plex Sans Regular" FontWeight="Thin" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+                    <DatePicker Text="{Binding DateOfBirth}" CalendarStyle="{StaticResource DOBCalendar}" Height="25" Margin="15" Width="150" FontSize="16" FontFamily="IBM Plex Sans Regular" FontWeight="Thin" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{StaticResource dataEntryText}" Text="Image"/>
-                    <TextBox Text="{Binding Image, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBox}" MaxLength="200" Width="150"/>
+                    <TextBox Text="{Binding Image}" Style="{StaticResource textBox}" MaxLength="200" Width="150"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 30 20 0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource dataEntryText}" Text="GPA"/>
+                    <TextBox  Text="{Binding GPA}" Style="{StaticResource textBox}" MaxLength="4" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 20 0">
                     <Button Style="{StaticResource secondaryButton}" Content="Cancel" Click="Button_Cancel"/>
                     <Button Style="{StaticResource primaryButton}" Content="Edit" Click="Button_Edit" Command="{Binding editStudentCommand}"/>
                 </StackPanel>

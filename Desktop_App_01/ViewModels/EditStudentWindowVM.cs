@@ -27,30 +27,37 @@ namespace Desktop_App_01.ViewModels
         [ObservableProperty]
         public string image;
 
-        int index;
+        [ObservableProperty]
+        public DateOnly dateOfBirth;
 
+        [ObservableProperty]
+        public double gPA;
+
+        int index;
         public EditStudentWindowVM()
         {
             FirstName = null;
             LastName = null;
             Age = 0;
             image = null;
+            GPA = 0;
         }
 
-        public EditStudentWindowVM(int id, string fname, string lname, int a, string img)
+        public EditStudentWindowVM(int id, string fname, string lname, int a, string img, double gpa, DateOnly dob)
         {
             index = id;
             FirstName = fname;
             LastName = lname;
             Age = a;
             image = img;
-
+            GPA = gpa;
+            dateOfBirth = dob;
         }
 
         [RelayCommand]
         public void editStudent()
         {
-            if (firstName == "" || lastName == "" || age == 0 || image == "")
+            if (firstName == "" || lastName == "" || (age <= 0 || age > 120) || image == "" || (gPA == 0 || gPA > 4.0))
             {
                 var window = new EmptyErrorMessageBox();
                 window.ShowDialog();
@@ -68,6 +75,8 @@ namespace Desktop_App_01.ViewModels
                             s.LastName = lastName;
                             s.Age = age;
                             s.Image = image;
+                            s.GPA = gPA;
+                            s.DateOfBirth = dateOfBirth;
                         }
                     }
                     db.SaveChanges();

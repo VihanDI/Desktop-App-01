@@ -26,10 +26,10 @@ namespace Desktop_App_01.Views
             DataContext = new EditStudentWindowVM();
         }
 
-        public EditStudentWindow(int id, string fname, string lname, int age, string img)
+        public EditStudentWindow(int id, string fname, string lname, int age, string img, double gpa, DateOnly dob)
         {
             InitializeComponent();
-            DataContext = new EditStudentWindowVM(id, fname, lname, age, img);
+            DataContext = new EditStudentWindowVM(id, fname, lname, age, img, gpa, dob);
         }
 
         private void Button_Cancel(object sender, RoutedEventArgs e)
