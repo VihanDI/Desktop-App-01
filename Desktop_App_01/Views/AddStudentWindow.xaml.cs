@@ -39,5 +39,12 @@ namespace Desktop_App_01.Views
             mainWindow.Show();
             Close();
         }
+
+        private void Button_Back(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
+        }
     }
 }

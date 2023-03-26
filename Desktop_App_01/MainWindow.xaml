@@ -7,6 +7,7 @@
         xmlns:viewModelDir="clr-namespace:Desktop_App_01.ViewModels"
         mc:Ignorable="d"
         Title="Student Info" Height="500" Width="800"
+        Icon="Icons/Icon.png"
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow"
         ResizeMode="CanMinimize"

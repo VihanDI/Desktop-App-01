@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icons\Icon.png" />
     <None Remove="Images\1.png" />
     <None Remove="Images\10.png" />
     <None Remove="Images\2.png" />
@@ -23,6 +24,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.4">
       <PrivateAssets>all</PrivateAssets>
@@ -36,6 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Icons\Icon.png" />
     <Resource Include="Images\1.png" />
     <Resource Include="Images\10.png" />
     <Resource Include="Images\2.png" />

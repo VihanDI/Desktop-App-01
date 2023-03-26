@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Desktop_App_01.Views"
         mc:Ignorable="d"
         Title="Confirmation" Height="140" Width="280"
+        Icon="/Icons/Icon.png"
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow"
         ResizeMode="NoResize">

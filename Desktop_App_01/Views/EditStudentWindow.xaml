@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop_App_01.Views"
         xmlns:viewModelDir="clr-namespace:Desktop_App_01.ViewModels"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         Title="EditStudentWindow" Height="500" Width="800"
+        Icon="/Icons/Icon.png"
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow"
         ResizeMode="CanMinimize">
@@ -28,7 +30,12 @@
 
             <Grid>
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Style="{StaticResource titleText}" TextAlignment="Left" Margin="70 15" Text="Edit student details"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Style="{StaticResource circleButton}" Click="Button_Back">
+                            <Icon:PackIconMaterial Kind="ArrowLeft"/>
+                        </Button>
+                        <TextBlock Style="{StaticResource titleText}" TextAlignment="Left" Margin="0 15" Text="Edit student details"/>
+                    </StackPanel>
                 </StackPanel>
             </Grid>
         </Border>

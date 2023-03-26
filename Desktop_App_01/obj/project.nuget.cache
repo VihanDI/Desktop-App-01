@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "uGs0Z1eQrar7gv3gGi54+g1Pvh3EFwd7eRJHtBHcE9k4eHR+fS/hwRBgJVTfjyxW+yRXbu6zWjp9DIiIGBiJOg==",
+  "dgSpecHash": "aeeIQB7ZLKZ4UixHFfFBKRJc+T92N9ByOyRbL9l06jbIoBrkuZhFuMJIsooycrhUvSR3UnrVxPv20x4NOnv+0w==",
   "success": true,
   "projectFilePath": "D:\\Data\\Documents\\Academics\\My Works\\GitHub Projects\\Desktop-App-01\\Desktop_App_01\\Desktop_App_01.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Inupa Vihan\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
     "C:\\Users\\Inupa Vihan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Inupa Vihan\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.11.0\\mahapps.metro.iconpacks.material.4.11.0.nupkg.sha512",
     "C:\\Users\\Inupa Vihan\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.4\\microsoft.data.sqlite.core.7.0.4.nupkg.sha512",
     "C:\\Users\\Inupa Vihan\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
     "C:\\Users\\Inupa Vihan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.4\\microsoft.entityframeworkcore.abstractions.7.0.4.nupkg.sha512",
