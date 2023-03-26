@@ -26,7 +26,7 @@ namespace Desktop_App_01.Views
             DataContext = new EditStudentWindowVM();
         }
 
-        public EditStudentWindow(int id, string fname, string lname, int age, string img, double gpa, DateOnly dob)
+        public EditStudentWindow(int id, string fname, string lname, int age, string img, double gpa, DateTime dob)
         {
             InitializeComponent();
             DataContext = new EditStudentWindowVM(id, fname, lname, age, img, gpa, dob);

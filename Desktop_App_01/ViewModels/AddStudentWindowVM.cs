@@ -28,7 +28,7 @@ namespace Desktop_App_01.ViewModels
         public string image;
 
         [ObservableProperty]
-        public DateOnly dateOfBirth;
+        public DateTime dateOfBirth;
 
         [ObservableProperty]
         public double gPA;
@@ -40,6 +40,7 @@ namespace Desktop_App_01.ViewModels
             Age = 0;
             image = null;
             gPA = 0;
+            dateOfBirth = DateTime.Now;
         }
 
         [RelayCommand]
